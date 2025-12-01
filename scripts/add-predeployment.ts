@@ -160,14 +160,16 @@ class PredeploymentError extends Error {
 	static chainIdNotProvided() {
 		return new PredeploymentError(
 			"Chain ID not provided",
-			`**⛔️ Error:**<br>` + `Chain ID not provided. Please set the CHAIN_ID environment variable.`,
+			`**⛔️ Error:**<br>` +
+				`Chain ID not provided. Please set the CHAIN_ID environment variable.`,
 		);
 	}
 
 	static invalidChainId(value: string) {
 		return new PredeploymentError(
 			"Invalid chain ID",
-			`**⛔️ Error:**<br>` + `Invalid chain ID: "${value}". Chain ID must be a positive integer.`,
+			`**⛔️ Error:**<br>` +
+				`Invalid chain ID: "${value}". Chain ID must be a positive integer.`,
 		);
 	}
 
@@ -216,4 +218,3 @@ class PredeploymentError extends Error {
 }
 
 runScript(addPredeployment);
-
